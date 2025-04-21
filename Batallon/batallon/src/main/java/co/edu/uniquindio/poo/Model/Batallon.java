@@ -86,4 +86,19 @@ public class Batallon {
         }
         return vehiculoMayorMisiones;
     }
+
+    public List<Vehiculo> obtenerVehiculos50Mis(){
+        List<Vehiculo> listaVehiculosMisi = new ArrayList<>();
+        for (Vehiculo vehiculo : listaVehiculos) {
+            if(vehiculo.getNumeroMisiones() >= 50){
+                listaVehiculosMisi.add(vehiculo);
+            }
+            if(listaVehiculosMisi.size() == 0){
+                System.out.println("No hay vehículos con 50 o más misiones");
+                return listaVehiculosMisi;
+            }
+        }
+
+        return listaVehiculosMisi;
+    }
 }
