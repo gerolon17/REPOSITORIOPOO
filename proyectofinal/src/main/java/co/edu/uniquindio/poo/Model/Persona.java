@@ -1,16 +1,19 @@
 package co.edu.uniquindio.poo.Model;
+import java.util.List;
+import java.util.ArrayList;
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String numeroId;
     private String telefono;
     private String direccion;
+    
 
-    Persona(String nombre, String numeroId, String telefono, String direccion){
+    Persona(String nombre, String numeroId, String telefono, String direccion) {
         this.nombre = nombre;
         this.numeroId = numeroId;
         this.telefono = telefono;
-        this.direccion = direccion;
+        this.direccion = direccion;   
     }
 
     public String getNombre() {
@@ -44,7 +47,6 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
     
     
 }

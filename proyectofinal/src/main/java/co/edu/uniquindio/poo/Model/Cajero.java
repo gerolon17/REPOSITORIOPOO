@@ -26,6 +26,10 @@ public class Cajero extends Persona{
         this.salario = salario;
     }
 
-    
+    public void registrarCliente(String nombre, String numeroId, String telefono, String direccion, String numeroCuenta, String pin, Banco banco) {
+        Cliente cliente = new Cliente(nombre, numeroId, telefono, direccion, numeroCuenta, pin);
+        banco.getClientes().add(cliente);
+        System.out.println("Cliente registrado exitosamente.");
+    }
     
 }

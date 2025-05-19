@@ -3,6 +3,7 @@ package co.edu.uniquindio.poo.Model;
 public class CuentaAhorros extends CuentaBancaria{
     private double tasaIntereses;
     private double limTransaccion;
+    
 
     public CuentaAhorros(String idCliente, String numeroCuenta, double saldoCuenta, double tasaIntereses, double limTransaccion){
         super(idCliente, numeroCuenta, saldoCuenta);
