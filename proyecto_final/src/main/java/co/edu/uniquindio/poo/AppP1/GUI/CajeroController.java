@@ -27,11 +27,7 @@ public class CajeroController {
     @FXML private TextField pinUsuarioField;
     @FXML private TextField identificacionUsuarioField;
 
-    private Cajero cajeroAutenticado; // El cajero autenticado que maneja esta sesión
-     // Suponiendo que el cliente tiene una cuenta principal asociada a su login
-
-    // Este método es llamado por FXMLLoader después de que los elementos FXML han sido procesados.
-    // Necesitamos un método para pasar el cliente autenticado desde LoginController.
+    private Cajero cajeroAutenticado; 
     public void setCajeroAutenticado(Cajero cajero) {
         this.cajeroAutenticado = cajero;
         if (cajero != null) {
@@ -100,8 +96,8 @@ public class CajeroController {
             Parent root = loader.load();
 
             RetirarController controller = loader.getController();
-            controller.setCuentaCliente(cuentaPrincipal); // Pasamos la cuenta
-            controller.setCajeroController(this); // Para actualizar el saldo
+            controller.setCuentaCliente(cuentaPrincipal); 
+            controller.setCajeroController(this); 
 
             Stage stage = new Stage();
             stage.setTitle("Retirar Dinero");
@@ -130,8 +126,8 @@ public class CajeroController {
             Parent root = loader.load();
 
             TransferirController controller = loader.getController();
-            controller.setCuentaOrigen(cuentaPrincipal); // Pasamos la cuenta de origen
-            controller.setCajeroController(this); // Para actualizar el saldo
+            controller.setCuentaOrigen(cuentaPrincipal); 
+            controller.setCajeroController(this); 
 
             Stage stage = new Stage();
             stage.setTitle("Transferir Dinero");
@@ -162,9 +158,9 @@ public class CajeroController {
             Stage stage = new Stage();
             stage.setTitle("Reportes de Transacciones");
             stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL); // Opcional: modal para bloquear la ventana principal
-            stage.initStyle(StageStyle.UTILITY); // Estilo de ventana de utilidad
-            stage.showAndWait(); // Muestra la ventana y espera a que se cierre
+            stage.initModality(Modality.APPLICATION_MODAL); 
+            stage.initStyle(StageStyle.UTILITY); 
+            stage.showAndWait(); 
 
         } catch (IOException e) {
             e.printStackTrace();
